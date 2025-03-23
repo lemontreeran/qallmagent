@@ -24,8 +24,9 @@ expressReceiver.app.use((req, res, next) => {
     next();
 });
 
-// ✅ The most important line: ensure Bolt routes are connected
-expressReceiver.app.use(expressReceiver.router);
+(async () => {
+    await app.init(); // <-- THIS IS THE FIX
+})();
 
 // ✅ Export for Vercel
 module.exports = expressReceiver.app;
