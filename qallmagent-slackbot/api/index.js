@@ -10,7 +10,8 @@ console.log('🔐 SLACK_SIGNING_SECRET:', signingSecret );
 // Create ExpressReceiver
 const receiver = new ExpressReceiver({
     signingSecret,
-    processBeforeResponse: true
+    processBeforeResponse: true,
+    logLevel: LogLevel.DEBUG
 });
 
 // Create the Bolt app
