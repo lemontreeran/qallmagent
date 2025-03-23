@@ -4,8 +4,8 @@ const { App, ExpressReceiver } = require('@slack/bolt');
 const signingSecret = process.env.SLACK_SIGNING_SECRET;
 const botToken = process.env.SLACK_BOT_TOKEN;
 
-console.log('🔐 SLACK_BOT_TOKEN:', botToken ? '✅ defined' : '❌ MISSING');
-console.log('🔐 SLACK_SIGNING_SECRET:', signingSecret ? '✅ defined' : '❌ MISSING');
+console.log('🔐 SLACK_BOT_TOKEN:', botToken );
+console.log('🔐 SLACK_SIGNING_SECRET:', signingSecret );
 
 // Create ExpressReceiver
 const receiver = new ExpressReceiver({
