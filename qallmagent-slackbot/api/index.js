@@ -1,36 +1,32 @@
 const { App, ExpressReceiver } = require('@slack/bolt');
 
-// ✅ Load secrets
 const signingSecret = process.env.SLACK_SIGNING_SECRET;
 const botToken = process.env.SLACK_BOT_TOKEN;
 
-// ✅ Create ExpressReceiver
-const receiver = new ExpressReceiver({
-    signingSecret,
-});
+console.log('🔐 SLACK_BOT_TOKEN:', botToken ? '✅ defined' : '❌ MISSING');
+console.log('🔐 SLACK_SIGNING_SECRET:', signingSecret ? '✅ defined' : '❌ MISSING');
 
-// ✅ Create Bolt App
+const receiver = new ExpressReceiver({ signingSecret });
+
 const app = new App({
     token: botToken,
     receiver,
 });
 
-// ✅ Register /ping command
-app.command('/ping', async ({ ack, say }) => {
-    console.log("✅ /ping triggered");
-    await ack();
-    await say("🏓 Pong from Vercel!");
-});
+if (botToken) {
+    app.command('/ping', async ({ ack, say }) => {
+        console.log('✅ /ping triggered');
+        await ack();
+        await say('🏓 Pong from Vercel!');
+    });
 
-// ✅ Initialize Bolt app if token is available
-(async () => {
-    if (!botToken) {
-        console.error("❌ SLACK_BOT_TOKEN is missing!");
-    } else {
+    // Optional: app.init() only if needed
+    (async () => {
         await app.init();
-        console.log("✅ Bolt app initialized");
-    }
-})();
+        console.log('✅ Bolt app initialized');
+    })();
+} else {
+    console.error('❌ SLACK_BOT_TOKEN is not defined – slash commands will not work');
+}
 
-// ✅ Export for Vercel
 module.exports = receiver.app;
