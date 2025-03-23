@@ -1,24 +1,31 @@
 const { App, ExpressReceiver } = require('@slack/bolt');
 
+// Initialize ExpressReceiver
 const expressReceiver = new ExpressReceiver({
-    signingSecret: process.env.SLACK_SIGNING_SECRET
+    signingSecret: process.env.SLACK_SIGNING_SECRET,
 });
 
+// Initialize Bolt app
 const app = new App({
     token: process.env.SLACK_BOT_TOKEN,
-    receiver: expressReceiver
+    receiver: expressReceiver,
 });
 
+// ✅ Register /ping slash command
 app.command('/ping', async ({ ack, say }) => {
-    console.log('/ping received from Slack');
+    console.log("⚡ Received /ping");
     await ack();
-    console.log('ack() complete');
-    await say('Pong!');
+    await say("🏓 Pong from Vercel!");
 });
 
+// 🧪 Debug: Log unmatched routes
 expressReceiver.app.use((req, res, next) => {
     console.log("🔥 Received unknown route", req.method, req.url);
     next();
 });
 
+// ✅ The most important line: ensure Bolt routes are connected
+expressReceiver.app.use(expressReceiver.router);
+
+// ✅ Export for Vercel
 module.exports = expressReceiver.app;
