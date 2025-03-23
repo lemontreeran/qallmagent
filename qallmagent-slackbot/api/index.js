@@ -10,8 +10,9 @@ const app = new App({
 });
 
 app.command('/ping', async ({ ack, say }) => {
-    console.log('✅ /ping received from Slack');
+    console.log('/ping received from Slack');
     await ack();
+    console.log('ack() complete');
     await say('Pong!');
 });
 
