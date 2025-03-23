@@ -10,8 +10,9 @@ const app = new App({
 });
 
 app.command('/ping', async ({ ack, say }) => {
+    console.log('✅ /ping received from Slack');
     await ack();
-    await say('🏓 Pong!');
+    await say('Pong!');
 });
 
 module.exports = receiver.app;
