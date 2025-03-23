@@ -1,29 +1,28 @@
 const { App, ExpressReceiver } = require('@slack/bolt');
 
-// Initialize ExpressReceiver
-const expressReceiver = new ExpressReceiver({
-    signingSecret: process.env.SLACK_SIGNING_SECRET,
+// ✅ Load secrets
+const signingSecret = process.env.SLACK_SIGNING_SECRET;
+const botToken = process.env.SLACK_BOT_TOKEN;
+
+// ✅ Create ExpressReceiver
+const receiver = new ExpressReceiver({
+    signingSecret,
 });
 
-// Initialize Bolt app
+// ✅ Create Bolt App
 const app = new App({
-    token: process.env.SLACK_BOT_TOKEN,
-    receiver: expressReceiver,
+    token: botToken,
+    receiver,
 });
 
-// ✅ Register /ping slash command
+// ✅ Register /ping command
 app.command('/ping', async ({ ack, say }) => {
-    console.log("⚡ Received /ping");
+    console.log("✅ /ping triggered");
     await ack();
     await say("🏓 Pong from Vercel!");
 });
 
-// 🧪 Debug: Log unmatched routes
-expressReceiver.app.use((req, res, next) => {
-    console.log("🔥 Received unknown route", req.method, req.url);
-    next();
-});
-
+// ✅ Initialize Bolt app if token is available
 (async () => {
     if (!botToken) {
         console.error("❌ SLACK_BOT_TOKEN is missing!");
@@ -34,4 +33,4 @@ expressReceiver.app.use((req, res, next) => {
 })();
 
 // ✅ Export for Vercel
-module.exports = expressReceiver.app;
+module.exports = receiver.app;
