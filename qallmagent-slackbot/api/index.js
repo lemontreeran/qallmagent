@@ -1,12 +1,12 @@
 const { App, ExpressReceiver } = require('@slack/bolt');
 
 const expressReceiver = new ExpressReceiver({
-    signingSecret: process.env.SLACK_SIGNING_SECRET,
+    signingSecret: process.env.SLACK_SIGNING_SECRET
 });
 
 const app = new App({
     token: process.env.SLACK_BOT_TOKEN,
-    receiver: expressReceiver,
+    receiver: expressReceiver
 });
 
 app.command('/ping', async ({ ack, say }) => {
@@ -15,4 +15,4 @@ app.command('/ping', async ({ ack, say }) => {
     await say('Pong!');
 });
 
-module.exports = receiver.app;
+exports.slack = functions.https.onRequest(expressReceiver.app);
