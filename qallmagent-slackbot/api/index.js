@@ -1,4 +1,4 @@
-const { App, ExpressReceiver } = require('@slack/bolt');
+const { App, LogLevel, ExpressReceiver } = require('@slack/bolt');
 
 // Load tokens from environment
 const signingSecret = process.env.SLACK_SIGNING_SECRET;
