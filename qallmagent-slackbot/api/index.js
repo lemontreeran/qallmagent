@@ -15,4 +15,4 @@ app.command('/ping', async ({ ack, say }) => {
     await say('Pong!');
 });
 
-exports.slack = functions.https.onRequest(expressReceiver.app);
+module.exports = expressReceiver.app;
