@@ -1,0 +1,20 @@
+# Node modules
+node_modules/
+
+# Local env variables (never commit this!)
+.env
+.env.local
+.env.production
+
+# Firebase credentials (if added later)
+serviceAccountKey.json
+
+# Logs
+logs/
+*.log
+
+# System files
+.DS_Store
+
+# Vercel local cache
+.vercel/
