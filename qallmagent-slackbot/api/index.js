@@ -25,7 +25,12 @@ expressReceiver.app.use((req, res, next) => {
 });
 
 (async () => {
-    await app.init(); // <-- THIS IS THE FIX
+    if (!botToken) {
+        console.error("❌ SLACK_BOT_TOKEN is missing!");
+    } else {
+        await app.init();
+        console.log("✅ Bolt app initialized");
+    }
 })();
 
 // ✅ Export for Vercel
