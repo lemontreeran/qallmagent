@@ -2,7 +2,10 @@
     "name": "openqnalab-bot",
     "version": "1.0.0",
     "scripts": {
-        "dev": "node api/index.js"
+        "dev": "node index.js",
+        "build": "npm run clean && npm run compile",
+        "clean": "rm -rf dist",
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
         "@slack/bolt": "^3.22.0",

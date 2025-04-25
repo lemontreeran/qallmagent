@@ -25,7 +25,7 @@ const app = new App({
 app.command('/pingbot', async ({ ack, respond }) => {
     console.log('✅ /ping triggered');
     await ack();
-    await say('🏓 Pong from Vercel!');
+    await respond('🏓 Pong from Vercel!');
 });
 
 // ❌ DO NOT call app.init()

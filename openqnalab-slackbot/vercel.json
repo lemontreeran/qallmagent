@@ -1,17 +1,14 @@
 {
-  "functions": {
-    "api/index.js": {
-      "runtime": "@vercel/node@5.1.14"
-    }
-  },
-  "routes": [
-    {
-      "src": "/api/?",
-      "dest": "/api/index.js"
-    },
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/index.js"
-    }
-  ]
+    "builds": [
+        {
+        "src": "/api/index.js",
+        "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+        "src": "/api/(.*)",
+        "dest": "/api/index.js"
+        }
+    ]
 }
