@@ -1,4 +1,5 @@
 const { App, LogLevel, ExpressReceiver } = require('@slack/bolt');
+const serverless = require('serverless-http');
 
 // Load tokens from environment
 const signingSecret = process.env.SLACK_SIGNING_SECRET;
@@ -30,4 +31,4 @@ app.command('/pingbot', async ({ ack, say }) => {
 // ❌ DO NOT call app.init()
 
 // Export the Express app to Vercel
-module.exports = receiver.app;
+module.exports = serverless(receiver.app);
