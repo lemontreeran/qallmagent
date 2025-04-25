@@ -22,7 +22,7 @@ const app = new App({
 });
 
 // Register slash command
-app.command('/pingbot', async ({ ack, say }) => {
+app.command('/pingbot', async ({ ack, respond }) => {
     console.log('✅ /ping triggered');
     await ack();
     await say('🏓 Pong from Vercel!');
