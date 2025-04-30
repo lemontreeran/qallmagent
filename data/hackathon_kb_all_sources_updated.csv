@@ -1,0 +1,36 @@
+id,id,topic,chunk,source
+1,1.0,Upcoming Workshops,"Agentforce NOW Workshop: March 20, 2025 / 10am - 12pm EST",devpost.md
+2,2.0,Inspiration,Agentforce Decoded for Developers,devpost.md
+3,3.0,Inspiration,Agentforce Decoded for Admins,devpost.md
+4,4.0,Inspiration,Agentblazer Community and NYC Hackathon Use Cases,devpost.md
+5,5.0,Inspiration,Ethical AI Standards in Agent Era,devpost.md
+6,6.0,Technical Resources,Trailhead Platform & Development Basics,devpost.md
+7,7.0,Technical Resources,Hackathon Resource Guide and Org Access Form,devpost.md
+8,8.0,Technical Resources,Agentforce Quick Start & Coral App,devpost.md
+9,9.0,Technical Resources,RAG Overview & Data Cloud Docs,devpost.md
+10,10.0,Technical Resources,Slack Integration for Bonus Prize,devpost.md
+11,11.0,Connect,Join Agentbuilder Slack & Virtual Hackathon Channel,devpost.md
+12,12.0,Connect,"Devpost Forum, Agentblazer Community, Official Rules",devpost.md
+13,13.0,Rules,"Important Hackathon dates including registration, judging, and voting",hackathon_rules.md
+14,14.0,Rules,"Eligibility criteria for individuals, teams, and exclusions",hackathon_rules.md
+15,15.0,Rules,"Submission process: how to register, access tools, and submit",hackathon_rules.md
+16,16.0,Rules,"Project requirements: what to build, platforms, originality",hackathon_rules.md
+17,17.0,Rules,"Judging Criteria: business relevance, creativity, impact, design, technical implementation",hackathon_rules.md
+18,18.0,Rules,Prizes overview including Slack Bonus,hackathon_rules.md
+19,19.0,Rules,Public voting and tie-breaking process,hackathon_rules.md
+20,20.0,Submission,Tips on structuring your hackathon project submission,hackathon_submission.md
+21,21.0,Submission,Creating a strong and engaging demonstration video,hackathon_submission.md
+22,22.0,Submission,Recommended video creation tools and technical instructions,hackathon_submission.md
+23,23.0,Submission,Accessibility and quality tips for demo recording,hackathon_submission.md
+24,24.0,Tips,Organize: Build a well-rounded team with complementary skills,hackathon_tips.md
+25,25.0,Tips,Ideate: Identify a unique and impactful use case,hackathon_tips.md
+26,26.0,Tips,Design: Develop a thoughtful data model and architecture,hackathon_tips.md
+27,27.0,Tips,"Build: Collaborate and ensure quality, include agents and UI polish",hackathon_tips.md
+28,28.0,Tips,Prepare: Tell a compelling story in your demo and submission,hackathon_tips.md
+29,,Architecture,The architecture uses Slack + Firestore + Agentforce Data Retriever + GPT-4 to answer user questions via RAG.,implementation.md
+30,,Slack Integration,Users onboard with `/register` and provide their Devpost ID. This ID is stored in Firestore and used to personalize context.,implementation.md
+31,,Slack Integration,The `/ask` command captures the question and looks up the user's Devpost context before calling the Agentforce Agent.,implementation.md
+32,,Agentforce,"The Agentforce agent uses a Data Retriever to query Salesforce Search Index, retrieves chunks, then passes to GPT-4 for response.",implementation.md
+33,,Agentforce,Prompt templates inside the Agentforce agent format the final input for GPT using user question and retrieved chunks.,implementation.md
+34,,MVP Flow,Phase 1: Identity Mapping (Slack ↔ Devpost); Phase 2: Upload markdown docs to Data Cloud and build Search Index; Phase 3: Slack bot handles `/ask` and connects to Agentforce Agent.,implementation.md
+35,,MVP Flow,"The system supports onboarding via Devpost usernames and Slack, and outputs Slack answers based on embedded markdown docs.",implementation.md

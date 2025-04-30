@@ -1,0 +1,74 @@
+id,chunk,topic,tag,source
+ba56452b,"Agentforce NOW Workshop: March 20, 2025 / 10am - 12pm EST",Devpost,Workshop,devpost.md
+2c9225db,"Dive into short, informative how-to videos featuring out-of-the-box Agentforce use cases, features and capabilities.",Devpost,Agentforce,devpost.md
+0e06428a,Agentforce Decoded for Developers: https://www.youtube.com/playlist?list=PLgIMQe2PKPSIELU1F09KPVyLF-V_N8jem,Devpost,Agentforce,devpost.md
+6d20f782,Agentforce Decoded for Admins: https://www.youtube.com/playlist?list=PLrC_ei2_Pv0Fb0i4wufGZsVwMyNj5ticI,Devpost,Agentforce,devpost.md
+7a1bb5fd,Join and get inspired by members of the Agentblazer Community: https://trailhead.salesforce.com/trailblazer-community/groups/0F94V0000002E89,Devpost,Community,devpost.md
+d740ca17,Discover use cases from the NYC Agentforce Hackathon: http://sforce.co/NYCHackUseCases,Devpost,Agentforce,devpost.md
+5cb3862a,How Salesforce Shapes Ethical AI Standards in the Agent Era: https://www.salesforce.com/news/stories/responsible-agentic-ai-guidelines/,Devpost,Responsible AI,devpost.md
+6f0b841b,"Trailhead: Salesforce Platform Basics, Platform Development Basics, Get Started with Salesforce Development",Devpost,Resources,devpost.md
+01576b2e,Hackathon Resource Guide: http://sforce.co/VirtualHackathonGuide,Devpost,Resources,devpost.md
+0ca11870,Org Access Form: https://forms.gle/KFVfJncxJzeb4yoZ9,Devpost,Admin,devpost.md
+eb13dd53,Quick Start with Agentforce: https://trailhead.salesforce.com/content/learn/projects/quick-start-build-your-first-agent-with-agentforce,Devpost,Tutorial,devpost.md
+20695e9a,Data Cloud Developer Center: https://developer.salesforce.com/developer-centers/data-cloud,Devpost,Data Cloud,devpost.md
+9301b2be,RAG in Data Cloud overview: https://help.salesforce.com/s/articleView?id=sf.c360_a_rag_overview.htm,Devpost,RAG,devpost.md
+7ab04d4f,The Coral Cloud Sample App: https://github.com/trailheadapps/coral-cloud,Devpost,Architecture,devpost.md
+c665f172,Connect your Agentforce Org with Slack: http://sforce.co/CYAOWSvh,Devpost,Slack Integration,devpost.md
+de50f626,Join the Agentbuilder Slack Workspace and the Virtual Hackathon channel,Devpost,Community,devpost.md
+83e24548,Agentblazer Community Group: https://trailhead.salesforce.com/trailblazer-community/groups/0F94V0000002E89,Devpost,Community,devpost.md
+f66110a2,Devpost Discussion Forum: https://agentforcehackathon.devpost.com/forum_topics,Devpost,Devpost,devpost.md
+e8ba6b84,Official Hackathon Rules and Translations: https://agentforcehackathon.devpost.com/rules,Devpost,Rules,devpost.md
+dc32b116,"Ensure your submission demonstrates the problem you're solving, the technology applied, and the impact.",Hackathon Submission,Submission,hackathon_submission.md
+c4e2c224,"Your demo video should clearly showcase your use case, features, and technical approach.",Hackathon Submission,Demo Tips,hackathon_submission.md
+36c012ce,Use screen recording tools like Quicktime or Camtasia. Avoid watermark tools. Record at 1080p resolution.,Hackathon Submission,Demo Tips,hackathon_submission.md
+cf1198a5,Avoid generative AI audio/video tools in your demo. Focus on accessibility and clean presentation.,Hackathon Submission,Demo Tips,hackathon_submission.md
+3197cb66,"Organize a strong team with defined roles: leader, admin, developer, marketer, designer, analyst.",Hackathon Tips,Team,hackathon_tips.md
+e0b085bf,"Find a unique, real-world use case. Avoid generic ones like 'order management'.",Hackathon Tips,Ideation,hackathon_tips.md
+7dad6d7f,"Design a thoughtful data model, agent actions, and required data for the use case.",Hackathon Tips,Design,hackathon_tips.md
+40a25935,"Distribute tasks, use demo data, and polish the UI/UX for submission.",Hackathon Tips,Build,hackathon_tips.md
+ed917582,"Craft a compelling story. Use optional slides to highlight value, features, and outcomes.",Hackathon Tips,Prepare,hackathon_tips.md
+1203cb96,"Agentforce system architecture includes Identity Mapping, Knowledge Base (RAG), AI Engine, Slack Bot, and Deployment module.",Architecture Overview,Architecture,architecture_discussion.md
+c50f1cb6,"Slack bot receives /ask command, retrieves user context via Devpost ID, queries the knowledge base, and sends result back to Slack.",Slack Integration,Slack Integration,architecture_discussion.md
+3e875923,Knowledge base includes chunked markdown files stored in Data Cloud. Search Index is used by the Agentforce Retriever to find relevant data.,Agentforce,Agentforce,architecture_discussion.md
+1b8897f2,Agentforce uses Prompt Template and GPT-4 to combine retrieved context with user question for accurate answers.,Agentforce,Agentforce,architecture_discussion.md
+dbd65f2f,"Data Retriever module connects to Data Cloud Search Index, retrieves context chunks and sends them into LLM prompt pipeline.",Agentforce,Architecture,architecture_discussion.md
+4f946591,"Slack bot is built with Bolt SDK, hosted via AWS Lambda, and uses Firestore to store Devpost and Salesforce user mapping.",Slack Integration,Slack Integration,architecture_discussion.md
+0ee5d0a4,"Personalization Rules can adjust answers based on Devpost ID, role, and prior queries to improve context relevance.",Agentforce,Personalization,architecture_discussion.md
+14426eba,Data Cloud Playground is created using Trailhead Coral Sample App with pre-enabled Data Cloud and Agentforce modules.,Architecture Overview,Environment Setup,architecture_discussion.md
+1bbffbfc,Craft a compelling story for your final submission.,Hackathon Tips,Prepare,hackathon_tips.md
+00577af2,Create a video that includes footage explaining your Project’s features and functionality through a comprehensive demonstration.,Hackathon Submission,Demo Tips,hackathon_submission.md
+970e72f2,"The video should include slides to introduce your use case and features, but slides are optional.",Hackathon Submission,Demo Tips,hackathon_submission.md
+c49ef3a4,Demo videos should be full screen and recorded in at least 1080p.,Hackathon Submission,Demo Tips,hackathon_submission.md
+c379fdf4,Use tools like QuickTime or Camtasia; avoid watermarked tools.,Hackathon Submission,Demo Tips,hackathon_submission.md
+f5c83701,"Ensure accessibility: use high-contrast themes, large fonts, and no copyrighted material.",Hackathon Submission,Demo Tips,hackathon_submission.md
+ec2f03de,Avoid generative AI tools for video/audio and do not edit Salesforce characters like Einstein.,Hackathon Submission,Demo Tips,hackathon_submission.md
+5fd4dada,"1. Organize: build a well-rounded, and collaborative team. Clearly define roles and align on complementary skill sets to maximize efficiency and creativity.",Hackathon Tips,Organize,hackathon_tips.md
+acdc27c8,1a. Teams may be comprised of up to 5 individuals. Consider roles & skill sets you may not have yourself including:,Hackathon Tips,Organize,hackathon_tips.md
+2ed1997b,1a-i. Team leader drives the team's vision and coordination.,Hackathon Tips,Organize,hackathon_tips.md
+19dc34fc,1a-ii. Admin builds functionality using low-code tools.,Hackathon Tips,Organize,hackathon_tips.md
+95682ba9,1a-iii. Developer pushes boundaries with custom components.,Hackathon Tips,Organize,hackathon_tips.md
+121e9eed,1a-iv. Marketer crafts a compelling narrative and pitch.,Hackathon Tips,Organize,hackathon_tips.md
+d7ce5f61,1a-v. Designer enhances usability and visual appeal.,Hackathon Tips,Organize,hackathon_tips.md
+5ef8ab23,1a-vi. Data analyst provides insights by interpreting and visualizing data.,Hackathon Tips,Organize,hackathon_tips.md
+3b4534a3,1a-vii. Content creator develops engaging content to support the pitch.,Hackathon Tips,Organize,hackathon_tips.md
+dd3f3b69,"2. Ideate: identify a unique, impactful, and innovative use case that effectively addresses the challenge.",Hackathon Tips,Ideate,hackathon_tips.md
+ec3dba62,2a. A winning solution starts with a unique and compelling use case. Think outside of the box and find industry expertise.,Hackathon Tips,Ideate,hackathon_tips.md
+2eb78aee,2b. Avoid common & generic examples like:,Hackathon Tips,Ideate,hackathon_tips.md
+b1eafa18,2b-i. Order management - where is my order?,Hackathon Tips,Ideate,hackathon_tips.md
+d39774e6,2b-ii. Case management - can you help me with my case?,Hackathon Tips,Ideate,hackathon_tips.md
+8472ad99,"3. Design: develop a robust architecture and a thoughtful data model to ensure seamless, effective user experience.",Hackathon Tips,Design,hackathon_tips.md
+a98a309e,3a-i. Define your data model using standard or custom objects.,Hackathon Tips,Design,hackathon_tips.md
+1c08b9e7,3a-ii. Think about your agent’s actions and use cases.,Hackathon Tips,Design,hackathon_tips.md
+4c598d03,3a-iii. Identify the necessary data.,Hackathon Tips,Design,hackathon_tips.md
+ec8aedbd,3a-iv. Define your UI/UX.,Hackathon Tips,Design,hackathon_tips.md
+659fb64f,4. Build: distribute tasks and work collaboratively to develop as much of your solution as possible while maintaining quality.,Hackathon Tips,Build,hackathon_tips.md
+b939e60a,4a-i. Tools - use the toolkit to your advantage.,Hackathon Tips,Build,hackathon_tips.md
+b811eaf2,4a-ii. Data - create demo data and ensure enough data is present.,Hackathon Tips,Build,hackathon_tips.md
+25954764,4a-iii. Agents - ensure Agentforce is central to the solution.,Hackathon Tips,Build,hackathon_tips.md
+14844656,4a-iv. UI/UX - polish page and record layouts.,Hackathon Tips,Build,hackathon_tips.md
+756ded5a,4a-v. App - build supporting components around your agent.,Hackathon Tips,Build,hackathon_tips.md
+81ac2f89,5. Prepare: craft a compelling story for your final submission.,Hackathon Tips,Prepare,hackathon_tips.md
+0f110585,5a. Tell a story with your demo that showcases the true power of Agentforce.,Hackathon Tips,Prepare,hackathon_tips.md
+d21084d3,5b. Use slides (optional) as a tool to tell the story of what you’ve built and the use case.,Hackathon Tips,Prepare,hackathon_tips.md
+81b07c8e,5c. Record a clean demo that showcases the app and agent that you’ve built.,Hackathon Tips,Prepare,hackathon_tips.md
+e90894c6,5d. Tell a story with your script that highlights the technology and the use case.,Hackathon Tips,Prepare,hackathon_tips.md

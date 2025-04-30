@@ -1,0 +1,20 @@
+id,chunk,topic,source
+1,"Agentforce NOW Workshop: March 20, 2025 / 10am - 12pm EST",events,devpost.md
+2,Agentforce Decoded for Developers - https://www.youtube.com/playlist?list=PLgIMQe2PKPSIELU1F09KPVyLF-V_N8jem,videos,devpost.md
+3,Agentforce Decoded for Admins - https://www.youtube.com/playlist?list=PLrC_ei2_Pv0Fb0i4wufGZsVwMyNj5ticI,videos,devpost.md
+4,Agentblazer Community - https://trailhead.salesforce.com/trailblazer-community/groups/0F94V0000002E89?tab=discussion,community,devpost.md
+5,Discover use cases - http://sforce.co/NYCHackUseCases,use-cases,devpost.md
+6,Responsible Agentic AI Guidelines - https://www.salesforce.com/news/stories/responsible-agentic-ai-guidelines/,ethics,devpost.md
+7,"Trailhead learning platform: Salesforce Platform Basics, Platform Development Basics, Get Started with Salesforce Development",learning,devpost.md
+8,Hackathon Resource Guide - http://sforce.co/VirtualHackathonGuide,resources,devpost.md
+9,Org request form - https://forms.gle/KFVfJncxJzeb4yoZ9,setup,devpost.md
+10,Quick Start: Build Your First Agent with Agentforce - https://trailhead.salesforce.com/content/learn/projects/quick-start-build-your-first-agent-with-agentforce,getting-started,devpost.md
+11,Data Cloud Developer Center - https://developer.salesforce.com/developer-centers/data-cloud,data-cloud,devpost.md
+12,Using Retrieval Augmented Generation in Data Cloud - https://help.salesforce.com/s/articleView?id=sf.c360_a_rag_overview.htm,rag,devpost.md
+13,The Coral Cloud Sample App - https://github.com/trailheadapps/coral-cloud,examples,devpost.md
+14,Connect Your Agentforce Org with Slack - http://sforce.co/CYAOWSvh,slack-integration,devpost.md
+15,Agentbuilder Slack Workspace - https://join.slack.com/t/agentblazercommunity/shared_invite/zt-2z08bmdaf-YAVAxnG3dm7VciVT4E0ZCg,communication,devpost.md
+16,Agentblazer Community Group - https://trailhead.salesforce.com/trailblazer-community/groups/0F94V0000002E89?tab=discussion,community,devpost.md
+17,Devpost Discussion Forum - https://agentforcehackathon.devpost.com/forum_topics,forum,devpost.md
+18,Official Rules - https://agentforcehackathon.devpost.com/rules,rules,devpost.md
+19,Official Rules Translations - sforce.co/AVHRulesTranslations%20,rules,devpost.md

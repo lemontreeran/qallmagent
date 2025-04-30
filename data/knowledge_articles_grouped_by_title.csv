@@ -1,0 +1,275 @@
+Title,Full Content,URL Name,Summary,Question,Visible In Internal App,Visible to Customer,Visible In Public Knowledge Base,Visible to Partner
+Agentforce,"Knowledge base includes chunked markdown files stored in Data Cloud. Search Index is used by the Agentforce Retriever to find relevant data.
+
+---
+
+Agentforce uses Prompt Template and GPT-4 to combine retrieved context with user question for accurate answers.
+
+---
+
+Data Retriever module connects to Data Cloud Search Index, retrieves context chunks and sends them into LLM prompt pipeline.
+
+---
+
+Personalization Rules can adjust answers based on Devpost ID, role, and prior queries to improve context relevance.",agentforce,Knowledge base includes chunked markdown files stored in Data Cloud. Search Index is used by the Agentforce Retriever to find relevant data. Agentforce uses Prompt Template and GPT-4 to combine retrieved context with user question for accurate answers. Data Retriever module connects to Data Cloud Se,What is: Agentforce?,True,True,False,False
+Architecture Overview,"Agentforce system architecture includes Identity Mapping, Knowledge Base (RAG), AI Engine, Slack Bot, and Deployment module.
+
+---
+
+Data Cloud Playground is created using Trailhead Coral Sample App with pre-enabled Data Cloud and Agentforce modules.",architecture-overview,"Agentforce system architecture includes Identity Mapping, Knowledge Base (RAG), AI Engine, Slack Bot, and Deployment module. Data Cloud Playground is created using Trailhead Coral Sample App with pre-enabled Data Cloud and Agentforce modules.",What is: Architecture Overview?,True,True,False,False
+Devpost,"Agentforce NOW Workshop: March 20, 2025 / 10am - 12pm EST
+
+---
+
+Dive into short, informative how-to videos featuring out-of-the-box Agentforce use cases, features and capabilities.
+
+---
+
+Agentforce Decoded for Developers: https://www.youtube.com/playlist?list=PLgIMQe2PKPSIELU1F09KPVyLF-V_N8jem
+
+---
+
+Agentforce Decoded for Admins: https://www.youtube.com/playlist?list=PLrC_ei2_Pv0Fb0i4wufGZsVwMyNj5ticI
+
+---
+
+Join and get inspired by members of the Agentblazer Community: https://trailhead.salesforce.com/trailblazer-community/groups/0F94V0000002E89
+
+---
+
+Discover use cases from the NYC Agentforce Hackathon: http://sforce.co/NYCHackUseCases
+
+---
+
+How Salesforce Shapes Ethical AI Standards in the Agent Era: https://www.salesforce.com/news/stories/responsible-agentic-ai-guidelines/
+
+---
+
+Trailhead: Salesforce Platform Basics, Platform Development Basics, Get Started with Salesforce Development
+
+---
+
+Hackathon Resource Guide: http://sforce.co/VirtualHackathonGuide
+
+---
+
+Org Access Form: https://forms.gle/KFVfJncxJzeb4yoZ9
+
+---
+
+Quick Start with Agentforce: https://trailhead.salesforce.com/content/learn/projects/quick-start-build-your-first-agent-with-agentforce
+
+---
+
+Data Cloud Developer Center: https://developer.salesforce.com/developer-centers/data-cloud
+
+---
+
+RAG in Data Cloud overview: https://help.salesforce.com/s/articleView?id=sf.c360_a_rag_overview.htm
+
+---
+
+The Coral Cloud Sample App: https://github.com/trailheadapps/coral-cloud
+
+---
+
+Connect your Agentforce Org with Slack: http://sforce.co/CYAOWSvh
+
+---
+
+Join the Agentbuilder Slack Workspace and the Virtual Hackathon channel
+
+---
+
+Agentblazer Community Group: https://trailhead.salesforce.com/trailblazer-community/groups/0F94V0000002E89
+
+---
+
+Devpost Discussion Forum: https://agentforcehackathon.devpost.com/forum_topics
+
+---
+
+Official Hackathon Rules and Translations: https://agentforcehackathon.devpost.com/rules",devpost,"Agentforce NOW Workshop: March 20, 2025 / 10am - 12pm EST Dive into short, informative how-to videos featuring out-of-the-box Agentforce use cases, features and capabilities. Agentforce Decoded for Developers: https://www.youtube.com/playlist?list=PLgIMQe2PKPSIELU1F09KPVyLF-V_N8jem Agentforce Decode",What is: Devpost?,True,True,False,False
+Hackathon Submission,"Ensure your submission demonstrates the problem you're solving, the technology applied, and the impact.
+
+---
+
+Your demo video should clearly showcase your use case, features, and technical approach.
+
+---
+
+Use screen recording tools like Quicktime or Camtasia. Avoid watermark tools. Record at 1080p resolution.
+
+---
+
+Avoid generative AI audio/video tools in your demo. Focus on accessibility and clean presentation.
+
+---
+
+Create a video that includes footage explaining your Project’s features and functionality through a comprehensive demonstration.
+
+---
+
+The video should include slides to introduce your use case and features, but slides are optional.
+
+---
+
+Demo videos should be full screen and recorded in at least 1080p.
+
+---
+
+Use tools like QuickTime or Camtasia; avoid watermarked tools.
+
+---
+
+Ensure accessibility: use high-contrast themes, large fonts, and no copyrighted material.
+
+---
+
+Avoid generative AI tools for video/audio and do not edit Salesforce characters like Einstein.",hackathon-submission,"Ensure your submission demonstrates the problem you're solving, the technology applied, and the impact. Your demo video should clearly showcase your use case, features, and technical approach. Use screen recording tools like Quicktime or Camtasia. Avoid watermark tools. Record at 1080p resolution. A",What is: Hackathon Submission?,True,True,False,False
+Hackathon Tips,"Organize a strong team with defined roles: leader, admin, developer, marketer, designer, analyst.
+
+---
+
+Find a unique, real-world use case. Avoid generic ones like 'order management'.
+
+---
+
+Design a thoughtful data model, agent actions, and required data for the use case.
+
+---
+
+Distribute tasks, use demo data, and polish the UI/UX for submission.
+
+---
+
+Craft a compelling story. Use optional slides to highlight value, features, and outcomes.
+
+---
+
+Craft a compelling story for your final submission.
+
+---
+
+1. Organize: build a well-rounded, and collaborative team. Clearly define roles and align on complementary skill sets to maximize efficiency and creativity.
+
+---
+
+1a. Teams may be comprised of up to 5 individuals. Consider roles & skill sets you may not have yourself including:
+
+---
+
+1a-i. Team leader drives the team's vision and coordination.
+
+---
+
+1a-ii. Admin builds functionality using low-code tools.
+
+---
+
+1a-iii. Developer pushes boundaries with custom components.
+
+---
+
+1a-iv. Marketer crafts a compelling narrative and pitch.
+
+---
+
+1a-v. Designer enhances usability and visual appeal.
+
+---
+
+1a-vi. Data analyst provides insights by interpreting and visualizing data.
+
+---
+
+1a-vii. Content creator develops engaging content to support the pitch.
+
+---
+
+2. Ideate: identify a unique, impactful, and innovative use case that effectively addresses the challenge.
+
+---
+
+2a. A winning solution starts with a unique and compelling use case. Think outside of the box and find industry expertise.
+
+---
+
+2b. Avoid common & generic examples like:
+
+---
+
+2b-i. Order management - where is my order?
+
+---
+
+2b-ii. Case management - can you help me with my case?
+
+---
+
+3. Design: develop a robust architecture and a thoughtful data model to ensure seamless, effective user experience.
+
+---
+
+3a-i. Define your data model using standard or custom objects.
+
+---
+
+3a-ii. Think about your agent’s actions and use cases.
+
+---
+
+3a-iii. Identify the necessary data.
+
+---
+
+3a-iv. Define your UI/UX.
+
+---
+
+4. Build: distribute tasks and work collaboratively to develop as much of your solution as possible while maintaining quality.
+
+---
+
+4a-i. Tools - use the toolkit to your advantage.
+
+---
+
+4a-ii. Data - create demo data and ensure enough data is present.
+
+---
+
+4a-iii. Agents - ensure Agentforce is central to the solution.
+
+---
+
+4a-iv. UI/UX - polish page and record layouts.
+
+---
+
+4a-v. App - build supporting components around your agent.
+
+---
+
+5. Prepare: craft a compelling story for your final submission.
+
+---
+
+5a. Tell a story with your demo that showcases the true power of Agentforce.
+
+---
+
+5b. Use slides (optional) as a tool to tell the story of what you’ve built and the use case.
+
+---
+
+5c. Record a clean demo that showcases the app and agent that you’ve built.
+
+---
+
+5d. Tell a story with your script that highlights the technology and the use case.",hackathon-tips,"Organize a strong team with defined roles: leader, admin, developer, marketer, designer, analyst. Find a unique, real-world use case. Avoid generic ones like 'order management'. Design a thoughtful data model, agent actions, and required data for the use case. Distribute tasks, use demo data, and po",What is: Hackathon Tips?,True,True,False,False
+Slack Integration,"Slack bot receives /ask command, retrieves user context via Devpost ID, queries the knowledge base, and sends result back to Slack.
+
+---
+
+Slack bot is built with Bolt SDK, hosted via AWS Lambda, and uses Firestore to store Devpost and Salesforce user mapping.",slack-integration,"Slack bot receives /ask command, retrieves user context via Devpost ID, queries the knowledge base, and sends result back to Slack. Slack bot is built with Bolt SDK, hosted via AWS Lambda, and uses Firestore to store Devpost and Salesforce user mapping.",What is: Slack Integration?,True,True,False,False
