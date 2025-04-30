@@ -1,0 +1,38 @@
+#your gcs project name
+PROJECT_ID=<YOUR_GCS_PROJECT_ID>
+
+#Contains the region of your GCS bucket. (If multi-region, select any region available in that location.)
+GCS_REGION=<YOUR_GCS_COMPUTE_REGION>
+
+#your salesforce login url
+SF_LOGIN_URL=<YOUR_ORG_URL_PICK_FROM_ABOVE_ACCORDING_TO_WHETHER_YOUR_ORG_IS_PREPROD_OR_PROD>
+
+#your salesforce username
+SF_USERNAME=<YOUR_ORG_USERNAME>
+
+#Contains the blob store bucket name where you will set up file notifications
+EVENT_GCS_BUCKET_SOURCE=<YOUR_DATA_SOURCE_GCS_BUCKET_NAME>
+
+#gcs bucket location
+LOCATION=<YOUR_GCS_BUCKET_REGION>
+
+#Contains the name of the gcs bucket that contains the source code .zip file to run your cloud function.
+SOURCE_CODE_BUCKET_NAME=<YOUR_CLOUD_FUNCTION_CODE_STORE_BUCKET_NAME>
+
+#your local code path of cloud function zip file
+SOURCE_CODE_LOCAL_PATH=<YOUR_LOCAL_SOURCE_CODE_PATH_FOR_CLOUD_FUNCTION>
+
+#your trigger location (keep it 'us' in case of multi-region)
+TRIGGER_REGION=<YOUR_TRIGGER_REGION>
+
+#Contains the name of the secret you create in Secret Manager when you upload the Consumer Key created in your connected app.
+CONSUMER_KEY_NAME=CONSUMER_KEY_<yourname>
+
+#Contains the value of the secret you create in Secret Manager when you upload the Consumer Key created in your connected app.
+CONSUMER_KEY_VALUE=<YOUR_CONSUMER_KEY_VALUE_FROM_CONNECTED_APP>
+
+#Contains the name of the secret you create in Secret Manager when you upload the RSA private key (.pem file).
+RSA_PRIVATE_KEY_NAME=RSA_PRIVATE_KEY_<yourname>
+
+#Contains the complete path to the keypair.pem file on your local machine. For example: /Users/Name/Documents/keypair.pem
+PEM_FILE_PATH=<YOUR_LOCAL_FILE_PATH_FOR_KEYPAIR.PEM_FILE>

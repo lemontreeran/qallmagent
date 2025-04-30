@@ -1,0 +1,12 @@
+aws CLI is already installed, skipping the installation
+AWS credentials are exported correctly
+AWS credentials entered in terminal are valid
+hackathon-contract-event is a valid bucket name
+hackathon-contract-lambda is a valid bucket name
+local source code for cloud function exists at ./aws_lambda_function.zip
+./aws_lambda_function.zip has a valid file of type .zip
+PEM file required for creation of secrete exists at ./salesforce.pem
+./salesforce.pem has a valid file of type .pem
+There are validation errors as below:
+us-west-1 region is invalid, please use a valid region
+NOTE: Please check sample config file at https://github.com/forcedotcom/file-notifier-for-blob-store/blob/main/installers/aws/input_parameters_s3.conf

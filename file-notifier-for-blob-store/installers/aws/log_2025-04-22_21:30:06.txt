@@ -1,0 +1,3 @@
+aws CLI is already installed, skipping the installation
+AWS credentials are exported correctly
+Error: Security credentials/tokens are either expired or invalid and please use valid security tokens

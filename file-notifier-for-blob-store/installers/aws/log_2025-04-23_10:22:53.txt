@@ -1,0 +1,123 @@
+aws CLI is already installed, skipping the installation
+AWS credentials are exported correctly
+AWS credentials entered in terminal are valid
+us-east-1 is a valid region
+agentforce-s3-rag is a valid bucket name
+hackathon-contract-lambda is a valid bucket name
+local source code for cloud function exists at ./aws_lambda_function.zip
+./aws_lambda_function.zip has a valid file of type .zip
+PEM file required for creation of secrete exists at ./salesforce.pem
+./salesforce.pem has a valid file of type .pem
+No validation errors.
+Step 1/16 : Successfully logged into AWS
+Step 2/16 : iam-role with name openqnalab-lambda-role already exists, skipping creation
+LAMBDA_ROLE_ARN: arn:aws:iam::038462781296:role/openqnalab-lambda-role
+Step 3/16 : openqnalab-s3-consumer-key already exists, skipping the creation
+Step 4/16 : openqnalab-s3-private-key already exists, skipping the creation
+Step 5/16 : Bucket hackathon-contract-lambda exists, skipping the creation of new bucket
+Step 6/16 : Bucket agentforce-s3-rag exists, skipping the creation of new bucket
+{
+    "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+    "ChecksumCRC64NVME": "AAAAAAAAAAA=",
+    "ChecksumType": "FULL_OBJECT",
+    "ServerSideEncryption": "AES256"
+}
+Step 7/16 : Successfully created agentforce-s3-rag directory in agentforce-s3-rag.
+Step 8/16 : Successfully created policy IAM_POLICY for openqnalab-lambda-role role in aws account 038462781296
+{
+    "ARN": "arn:aws:secretsmanager:us-east-1:038462781296:secret:openqnalab-s3-consumer-key-UAjsnm",
+    "Name": "openqnalab-s3-consumer-key"
+}
+Step 9/16 : Successfully attached policy to openqnalab-s3-consumer-key
+{
+    "ARN": "arn:aws:secretsmanager:us-east-1:038462781296:secret:openqnalab-s3-private-key-o9GUEv",
+    "Name": "openqnalab-s3-private-key"
+}
+Step 10/16 : Successfully attached policy to openqnalab-s3-private-key
+Step 11/16 : Successfully uploaded source code of cloud function from ./aws_lambda_function.zip to bucket hackathon-contract-lambda/key
+Step 12/16 :  Lambda function openqnalab-lambda-fn exists, skipping the creation
+Step 13/16: Starting adding permission to invoke lambda function openqnalab-lambda-fn with ARN arn:aws:lambda:us-east-1:038462781296:function:openqnalab-lambda-fn to bucket agentforce-s3-rag
+{
+    "Statement": "{\"Sid\":\"resource_policy_1745367780\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"s3.amazonaws.com\"},\"Action\":\"lambda:InvokeFunction\",\"Resource\":\"arn:aws:lambda:us-east-1:038462781296:function:openqnalab-lambda-fn\",\"Condition\":{\"StringEquals\":{\"AWS:SourceAccount\":\"038462781296\"},\"ArnLike\":{\"AWS:SourceArn\":\"arn:aws:s3:::agentforce-s3-rag\"}}}"
+}
+Step 13/16: Completed adding permission to invoke lambda function openqnalab-lambda-fn with ARN arn:aws:lambda:us-east-1:038462781296:function:openqnalab-lambda-fn to bucket agentforce-s3-rag
+Existing notification details are as below
+{
+    "LambdaFunctionConfigurations": [
+        {
+            "Id": "Event_1745356651",
+            "LambdaFunctionArn": "arn:aws:lambda:us-east-1:038462781296:function:openqnalab-lambda-fn",
+            "Events": [
+                "s3:ObjectCreated:*",
+                "s3:ObjectRemoved:*"
+            ],
+            "Filter": {
+                "Key": {
+                    "FilterRules": [
+                        {
+                            "Name": "Prefix",
+                            "Value": "key"
+                        },
+                        {
+                            "Name": "Suffix",
+                            "Value": ""
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
+Lambda function-type event notification exists on bucket agentforce-s3-rag, appending new event notification
+Concatenated notification details are as below
+{
+  "LambdaFunctionConfigurations": [
+    {
+      "Id": "Event_1745356651",
+      "LambdaFunctionArn": "arn:aws:lambda:us-east-1:038462781296:function:openqnalab-lambda-fn",
+      "Events": [
+        "s3:ObjectCreated:*",
+        "s3:ObjectRemoved:*"
+      ],
+      "Filter": {
+        "Key": {
+          "FilterRules": [
+            {
+              "Name": "Prefix",
+              "Value": "key"
+            },
+            {
+              "Name": "Suffix",
+              "Value": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Id": "Event_1745367780",
+      "LambdaFunctionArn": "arn:aws:lambda:us-east-1:038462781296:function:openqnalab-lambda-fn",
+      "Events": [
+        "s3:ObjectCreated:*",
+        "s3:ObjectRemoved:*"
+      ],
+      "Filter": {
+        "Key": {
+          "FilterRules": [
+            {
+              "Name": "Prefix",
+              "Value": "agentforce-s3-rag"
+            },
+            {
+              "Name": "Suffix",
+              "Value": ""
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
+Step 14/16 : Successfully created S3 bucket event notification for bucket - agentforce-s3-rag
+Step 15/16 : Successfully attached openqnalab-lambda-role to upload logs to CloudWatch
+Step 16/16 : Event notification configuration on agentforce-s3-rag bucket is Successful

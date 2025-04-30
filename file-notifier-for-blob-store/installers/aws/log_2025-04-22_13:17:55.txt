@@ -1,0 +1,161 @@
+aws CLI is already installed, skipping the installation
+AWS credentials are exported correctly
+AWS credentials entered in terminal are valid
+us-east-1 is a valid region
+hackathon-contract-event is a valid bucket name
+hackathon-contract-lambda is a valid bucket name
+local source code for cloud function exists at ./aws_lambda_function.zip
+./aws_lambda_function.zip has a valid file of type .zip
+PEM file required for creation of secrete exists at ./salesforce.pem
+./salesforce.pem has a valid file of type .pem
+No validation errors.
+Step 1/16 : Successfully logged into AWS
+{
+    "Role": {
+        "Path": "/",
+        "RoleName": "openqnalab-lambda-role",
+        "RoleId": "AROAQR5EPO5YPVNBTQRHA",
+        "Arn": "arn:aws:iam::038462781296:role/openqnalab-lambda-role",
+        "CreateDate": "2025-04-22T03:18:06+00:00",
+        "AssumeRolePolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Principal": {
+                        "Service": "lambda.amazonaws.com"
+                    },
+                    "Action": "sts:AssumeRole"
+                }
+            ]
+        }
+    }
+}
+Step 2/16 : Successfully created iam-role with name openqnalab-lambda-role.
+LAMBDA_ROLE_ARN: arn:aws:iam::038462781296:role/openqnalab-lambda-role
+{
+    "ARN": "arn:aws:secretsmanager:us-east-1:038462781296:secret:openqnalab-s3-consumer-key-UAjsnm",
+    "Name": "openqnalab-s3-consumer-key",
+    "VersionId": "012fe63d-165f-4c13-a0e9-dae171be175b"
+}
+Step 3/16 : Secrete Key with name openqnalab-s3-consumer-key created successfully.
+{
+    "ARN": "arn:aws:secretsmanager:us-east-1:038462781296:secret:openqnalab-s3-private-key-o9GUEv",
+    "Name": "openqnalab-s3-private-key",
+    "VersionId": "9f47b2cf-7b54-4fda-a409-5448d0ea9e92"
+}
+Step 4/16 : Successfully created openqnalab-s3-private-key
+{
+    "Location": "/hackathon-contract-lambda"
+}
+Step 5/16 : Successfully created bucket hackathon-contract-lambda in region us-east-1.
+{
+    "Location": "/hackathon-contract-event"
+}
+Step 6/16 : Successfully created bucket hackathon-contract-event in region us-east-1.
+{
+    "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+    "ChecksumCRC64NVME": "AAAAAAAAAAA=",
+    "ChecksumType": "FULL_OBJECT",
+    "ServerSideEncryption": "AES256"
+}
+Step 7/16 : Successfully created key directory in hackathon-contract-event.
+Step 8/16 : Successfully created policy IAM_POLICY for openqnalab-lambda-role role in aws account 038462781296
+{
+    "ARN": "arn:aws:secretsmanager:us-east-1:038462781296:secret:openqnalab-s3-consumer-key-UAjsnm",
+    "Name": "openqnalab-s3-consumer-key"
+}
+Step 9/16 : Successfully attached policy to openqnalab-s3-consumer-key
+{
+    "ARN": "arn:aws:secretsmanager:us-east-1:038462781296:secret:openqnalab-s3-private-key-o9GUEv",
+    "Name": "openqnalab-s3-private-key"
+}
+Step 10/16 : Successfully attached policy to openqnalab-s3-private-key
+Step 11/16 : Successfully uploaded source code of cloud function from ./aws_lambda_function.zip to bucket hackathon-contract-lambda/key
+{
+    "FunctionName": "openqnalab-lambda-fn",
+    "FunctionArn": "arn:aws:lambda:us-east-1:038462781296:function:openqnalab-lambda-fn",
+    "Runtime": "python3.11",
+    "Role": "arn:aws:iam::038462781296:role/openqnalab-lambda-role",
+    "Handler": "unstructured_data.s3_events_handler",
+    "CodeSize": 24452904,
+    "Description": "",
+    "Timeout": 60,
+    "MemorySize": 128,
+    "LastModified": "2025-04-22T03:18:41.965+0000",
+    "CodeSha256": "k9Yfv16aCn2MIIB7yzW7AdSFstLmPHIJq/EBMy5ldK0=",
+    "Version": "$LATEST",
+    "Environment": {
+        "Variables": {
+            "CONSUMER_KEY": "openqnalab-s3-consumer-key",
+            "RSA_PRIVATE_KEY": "openqnalab-s3-private-key",
+            "SF_LOGIN_URL": "https://orgfarm-3bb0786266-dev-ed.develop.my.salesforce.com/",
+            "SF_AUDIENCE_URL": "https://orgfarm-3bb0786266-dev-ed.develop.my.salesforce.com/",
+            "SF_USERNAME": "ran909@agentforce.com"
+        }
+    },
+    "TracingConfig": {
+        "Mode": "PassThrough"
+    },
+    "RevisionId": "2e55461d-8904-4b8e-9c32-32d1fd721c1c",
+    "State": "Pending",
+    "StateReason": "The function is being created.",
+    "StateReasonCode": "Creating",
+    "PackageType": "Zip",
+    "Architectures": [
+        "x86_64"
+    ],
+    "EphemeralStorage": {
+        "Size": 512
+    },
+    "SnapStart": {
+        "ApplyOn": "None",
+        "OptimizationStatus": "Off"
+    },
+    "RuntimeVersionConfig": {
+        "RuntimeVersionArn": "arn:aws:lambda:us-east-1::runtime:b760c27714353b17d37a0732f708fb8d0b34d5ea821a5c0c36fa82b15cc9633a"
+    },
+    "LoggingConfig": {
+        "LogFormat": "Text",
+        "LogGroup": "/aws/lambda/openqnalab-lambda-fn"
+    }
+}
+Step 12/16 : Successfully created cloud/lamda function with name openqnalab-lambda-fn
+Step 13/16: Starting adding permission to invoke lambda function openqnalab-lambda-fn with ARN arn:aws:lambda:us-east-1:038462781296:function:openqnalab-lambda-fn to bucket hackathon-contract-event
+{
+    "Statement": "{\"Sid\":\"resource_policy_1745291881\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"s3.amazonaws.com\"},\"Action\":\"lambda:InvokeFunction\",\"Resource\":\"arn:aws:lambda:us-east-1:038462781296:function:openqnalab-lambda-fn\",\"Condition\":{\"StringEquals\":{\"AWS:SourceAccount\":\"038462781296\"},\"ArnLike\":{\"AWS:SourceArn\":\"arn:aws:s3:::hackathon-contract-event\"}}}"
+}
+Step 13/16: Completed adding permission to invoke lambda function openqnalab-lambda-fn with ARN arn:aws:lambda:us-east-1:038462781296:function:openqnalab-lambda-fn to bucket hackathon-contract-event
+Existing notification details are as below
+
+No Lambda function-type event notification exists on bucket hackathon-contract-event, Adding new event notification
+Concatenated notification details are as below
+{
+  "LambdaFunctionConfigurations": [
+    {
+      "Id": "Event_1745291881",
+      "LambdaFunctionArn": "arn:aws:lambda:us-east-1:038462781296:function:openqnalab-lambda-fn",
+      "Events": [
+        "s3:ObjectCreated:*",
+        "s3:ObjectRemoved:*"
+      ],
+      "Filter": {
+        "Key": {
+          "FilterRules": [
+            {
+              "Name": "Prefix",
+              "Value": "key"
+            },
+            {
+              "Name": "Suffix",
+              "Value": ""
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
+Step 14/16 : Successfully created S3 bucket event notification for bucket - hackathon-contract-event
+Step 15/16 : Successfully attached openqnalab-lambda-role to upload logs to CloudWatch
+Step 16/16 : Event notification configuration on hackathon-contract-event bucket is Successful
